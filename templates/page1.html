@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Price Monitor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <script src="/static/js/jquery-3.4.1.min.js"></script> -->
+  <!-- <script src="/static/js/submitLink.js"></script> -->
+  <!-- <script src='{{ url_for("static", filename="js/jquery-3.4.1.min.js")}}'></script> -->
+
+
+</head>
+
+<body>
+    <script src='{{ url_for("static", filename="js/submitLink.js")}}'></script>
+    <!-- <script src='{{ url_for("static", filename="js/main.js")}}'></script> -->
+    <div class="container">
+        <div class="header">
+        <h3 class="text-muted">Price Monitor App</h3>
+        <a href="page2">Page 2</a>
+        </div>
+        <div class="form-group">
+        <form class="form-submit" action="detailProduct">
+        <label for="productLink">Product Link</label>
+        <input type="product" class="form-control" id="productLink" name="productLink" aria-describedby="product" placeholder="Enter Product link">
+        <button id="btnSubmitLink" class="btn btn-lg btn-primary btn-block" type="button">Submit</button>
+        </form>
+      </div>
+      <div>
+        <footer class="footer">
+            <p>&copy; Arif Riswanto 2020</p>
+        </footer>
+    </div>
+</body>
+</html>

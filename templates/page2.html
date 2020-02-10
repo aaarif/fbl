@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Price Monitor: Page 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script src='{{ url_for("static", filename="js/submitLink.js")}}'></script>
+    <div class="container">
+        <div class="header">
+        <h3 class="text-muted">Price Monitor App</h3>
+        </div>
+        <div class="form-group">
+        <form class="form-submit">
+        <label for="productLinks">Submitted Links</label>
+        <table>
+  <thead>
+    <th>Product</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Link</th>
+    </thead>
+        {%for i in range(0, size)%}
+      <tr>
+        <td>{{prod_list[i]['product']}}</td>
+        <td>{{prod_list[i]['description']}}</td>
+        <td>{{prod_list[i]['price']}}</td>
+        <td><a href="{{ '%s'%prod_list[i]['link']}}">{{prod_list[i]['link']}}</a></td>
+      </tr>
+        <!-- <li><a href="{{ '%s'%prod_list[i]['link']}}">{{prod_list[i]['link']}}</a></li> -->
+      {%endfor%}
+    </table>
+     </form>
+      </div>
+        <footer class="footer">
+            <p>&copy; Arif Riswanto 2020</p>
+        </footer>
+    </div>
+</body>
+</html>
