@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 import logging
 import requests
 import http.client
-from lxml import html, etree
 from bs4 import BeautifulSoup
 
 
@@ -25,7 +24,6 @@ class models(object):
                 dt = {}
                 dt['link'] = s
                 page = requests.get('{}'.format(s))
-                tree = html.fromstring(page.content)
                 soup = BeautifulSoup(page.content, 'html.parser')
                 desc = soup.find(id="description")
                 dt['description'] = desc.text
