@@ -1,6 +1,4 @@
 from flask import Flask, json, render_template, request, redirect, Response, url_for
-import logging
-from datetime import datetime
 from models import models
 
 app = Flask(__name__, template_folder="templates")

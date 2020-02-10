@@ -1,11 +1,4 @@
-import json
-import os
-import sys
-import yaml
-from datetime import datetime, timedelta
-import logging
 import requests
-import http.client
 from bs4 import BeautifulSoup
 
 
