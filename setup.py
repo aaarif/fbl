@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder="templates")
 obj_mod = models()
 
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def main():
     return render_template('page1.html')
 
